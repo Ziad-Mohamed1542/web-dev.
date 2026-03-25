@@ -8,111 +8,177 @@
       type="image/png"
       href="images/Client3_LogoPalette2_5C2E5C.png"
     />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
     <header>
-      <img
-        src="images/Client3_LogoPalette2_5C2E5C.png"
-        alt="Book Haven Logo"
-        width="100"
-      />
-      <h1>Book Haven Bookstore</h1>
+      <div id="header-upper">
+        <a href="index.html">
+          <img
+            src="images/Client3_LogoPalette2_5C2E5C.png"
+            alt="Book Haven Logo"
+            id="logo"
+          />
+        </a>
+        <h1 id="client-name">Book Haven Bookstore</h1>
+      </div>
 
       <nav>
-        <a href="index.html">Home</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="about.html">About Us</a>
-        <a href="custom.html">Testimonials</a>
+        <ul class="navbar-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="custom.html">Testimonials</a></li>
+        </ul>
+
+        <button class="navbar">
+          <i class="fa-solid fa-bars"></i>
+          <ul class="navbar-list-mobile">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="custom.html">Testimonials</a></li>
+          </ul>
+        </button>
       </nav>
     </header>
-    <section>
-      <button type="button">View Cart</button>
+    <section class="cart-controls">
+      <div class="cart-buttons">
+        <button type="button" id="view-cart-btn">
+          <i class="fa-solid fa-cart-shopping"></i> View Cart
+        </button>
+        <button type="button" id="clear-cart-btn">Clear Cart</button>
+        <button type="button" id="process-order-btn">Process Order</button>
+      </div>
     </section>
-    <section>
+    <section class="gallery-section">
       <h2>Our Products</h2>
 
-      <table border="1" style="width: 100%; table-layout: fixed; border-collapse: collapse; text-align: center;">
-        <tr>
-          <td>
-            <img src="images/Client3_Book1.png" width="150" />
-            <p>Brie Mine 4Ever</p>
-            <p>A book for cheese lovers</p>
-            <button>Add to Cart</button>
-          </td>
+      <div class="products-container">
+        <div class="product">
+          <img src="images/Client3_Book1.png" alt="Brie Mine 4Ever" />
+          <p>Brie Mine 4Ever</p>
+          <p>A book for cheese lovers</p>
+          <button type="button" class="add-to-cart" data-item="Brie Mine 4Ever">
+            Add to Cart
+          </button>
+        </div>
 
-          <td>
-            <img src="images/Client3_Book2.png" width="150" />
-            <p>Glory Riders</p>
-            <p>A book about bikers</p>
-            <button>Add to Cart</button>
-          </td>
+        <div class="product">
+          <img src="images/Client3_Book2.png" alt="Glory Riders" />
+          <p>Glory Riders</p>
+          <p>A book about bikers</p>
+          <button type="button" class="add-to-cart" data-item="Glory Riders">
+            Add to Cart
+          </button>
+        </div>
 
-          <td>
-            <img src="images/Client3_Book3.png" width="150" />
-            <p>Sorcerer’s Shadowed Chronicles</p>
-            <p>A fantasy book</p>
-            <button>Add to Cart</button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <img src="images/Client3_Magazine1.png" width="150" />
-            <p>Ball</p>
-            <p>Pickleball magazine</p>
-            <button>Add to Cart</button>
-          </td>
+        <div class="product">
+          <img
+            src="images/Client3_Book3.png"
+            alt="Sorcerer’s Shadowed Chronicles"
+          />
+          <p>Sorcerer’s Shadowed Chronicles</p>
+          <p>A fantasy book</p>
+          <button
+            type="button"
+            class="add-to-cart"
+            data-item="Sorcerer’s Shadowed Chronicles"
+          >
+            Add to Cart
+          </button>
+        </div>
 
-          <td>
-            <img src="images/Client3_Magazine2.png" width="150" />
-            <p>Travel</p>
-            <p>Travel magazine</p>
-            <button>Add to Cart</button>
-          </td>
+        <div class="product">
+          <img src="images/Client3_Magazine1.png" alt="Ball Magazine" />
+          <p>Ball</p>
+          <p>Pickleball magazine</p>
+          <button type="button" class="add-to-cart" data-item="Ball">
+            Add to Cart
+          </button>
+        </div>
 
-          <td>
-            <img src="images/Client3_Magazine3.png" width="150" />
-            <p>Eat.</p>
-            <p>Food magazine</p>
-            <button>Add to Cart</button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <img src="images/Client3_ToteBag.png" width="150" />
-            <p>Tote Bag</p>
-            <p>All I Do Is Read</p>
-            <button>Add to Cart</button>
-          </td>
+        <div class="product">
+          <img src="images/Client3_Magazine2.png" alt="Travel Magazine" />
+          <p>Travel</p>
+          <p>Travel magazine</p>
+          <button type="button" class="add-to-cart" data-item="Travel">
+            Add to Cart
+          </button>
+        </div>
 
-          <td>
-            <img src="images/Client3_Notebook.png" width="150" />
-            <p>Notebook</p>
-            <p>Book Haven branded</p>
-            <button>Add to Cart</button>
-          </td>
+        <div class="product">
+          <img src="images/Client3_Magazine3.png" alt="Eat Magazine" />
+          <p>Eat.</p>
+          <p>Food magazine</p>
+          <button type="button" class="add-to-cart" data-item="Eat.">
+            Add to Cart
+          </button>
+        </div>
 
-          <td>
-            <img src="images/Client3_Stickers.png" width="150" />
-            <p>Stickers</p>
-            <p>Reading themed stickers</p>
-            <button>Add to Cart</button>
-          </td>
-        </tr>
-      </table>
+        <div class="product">
+          <img src="images/Client3_ToteBag.png" alt="Tote Bag" />
+          <p>Tote Bag</p>
+          <p>All I Do Is Read</p>
+          <button type="button" class="add-to-cart" data-item="Tote Bag">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="product">
+          <img src="images/Client3_Notebook.png" alt="Notebook" />
+          <p>Notebook</p>
+          <p>Book Haven branded</p>
+          <button type="button" class="add-to-cart" data-item="Notebook">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="product">
+          <img src="images/Client3_Stickers.png" alt="Stickers" />
+          <p>Stickers</p>
+          <p>Reading themed stickers</p>
+          <button type="button" class="add-to-cart" data-item="Stickers">
+            Add to Cart
+          </button>
+        </div>
+      </div>
     </section>
-    <footer>
-      <h3>Subscribe to our Newsletter</h3>
-      <form>
-        <input type="email" placeholder="Enter your email" required />
-        <button type="submit">Subscribe</button>
-      </form>
 
-      <p>Follow us on social media</p>
-      <ul style="list-style: none; padding: 0">
-        <li><a href="#" target="_blank">Facebook</a></li>
-        <li><a href="#" target="_blank">Instagram</a></li>
-        <li><a href="#" target="_blank">Twitter</a></li>
-      </ul>
+    <div id="cart-modal" class="modal">
+      <div class="modal-content">
+        <span id="close-cart-modal" class="close">×</span>
+        <h3>Your Cart</h3>
+        <ul id="cart-items"></ul>
+      </div>
+    </div>
+    <footer>
+      <div class="newsletter-section">
+        <h3>Subscribe to our Newsletter</h3>
+        <form id="subscribe-form">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit" id="subscribe-btn">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="social-section">
+        <p>Follow us on social media</p>
+        <ul>
+          <li><a href="#" target="_blank">Facebook</a></li>
+          <li><a href="#" target="_blank">Instagram</a></li>
+          <li><a href="#" target="_blank">Twitter</a></li>
+        </ul>
+      </div>
 
       <nav>
         <a href="index.html">Home</a>
@@ -121,5 +187,6 @@
         <a href="custom.html">Testimonials</a>
       </nav>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
